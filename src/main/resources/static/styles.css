@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.header-bg {
+    background-color: #212121;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.filtter-button {
+    width: 100px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.search-bar {
+    height: 1.5rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .header-bg {
+        flex-direction: column;
+        align-items: start;
+        height: 8rem;
+        font-size: 0.5rem;
+    }
+}
+
+.filter-button {
+    height: 1rem;
+    width: 3rem;
+}
+
+.employee-card-section {
+    padding: 3%;
+}
+
+.paging-section {
+    background-color: #ffffff;
+    height: 5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.add-button {
+    background-color: rgb(13, 153, 13);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 10rem;
+    height: 2rem;
+}
+
+
+.employee-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.emp-from-container {
+    display: none;
+}
+
+.emp-from-container-active {
+    display: block;
+}
+
+
+.employee-card-section {
+    background-color: #f0f0f0;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.employee-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+
+
+.form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+#emp-form {
+    max-width: 400px;
+    margin-top: 2rem;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: black;
+    font-size: 15px;
+}
+
+input {
+    margin-top: 10px;
+    width: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formSubmit-button {
+    background-color: #0096FF;
+    width: 3rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+@media screen and (min-width:769px) {
+    #emp-form {
+        height: 45vh;
+        width: 30%;
+    }
+
+    input {
+        width: 200px;
+    }
+}
+
+#filterSidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 300px;
+    height: 100%;
+    background: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+#filterSidebar.active {
+    right: 0;
+}
+
+.fotter-section {
+    background-color: #212121;
+    height: 5rem;
+    width: 100%;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}

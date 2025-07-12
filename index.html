@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="src/main/resources/static/styles.css">
+</head>
+
+<body>
+    <!-- Header Part-->
+    <header class="header-bg">
+        <h1>Employee Directory</h1>
+        <input class="search-bar" type="search" id="searchInput" placeholder="Search by name or email"
+            onchange="OnchangeFunc()">
+        <button onclick="toggleFilter()" type="button" class="filtter-button">Filter</button>
+    </header>
+    <!--paging and Sort Section -->
+    <section class="paging-section">
+        <div>
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy" onchange="OnchangeFunc()">
+                <option value="select">select</option>
+                <option value="firstName">First Name</option>
+                <option value="department">Department</option>
+            </select>
+            <label for="pageSize">Show:</label>
+            <select id="pageSize" onchange="renderPage(1)">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+        <button class="add-button" onclick="addNewEmp()">Add Employee</button>
+    </section>
+    <!--Employees card Section-->
+    <section class="employee-card-section">
+        <div class="employee-list" id="employeeList"></div>
+        <div id="paginationControls"></div>
+    </section>
+    <!--Form Section-->
+    <section class="form-section">
+        <div id="emp-form" class="emp-from-container">
+            <form class="form-container">
+                <h1 id="formTitle">Add Employee</h1>
+                <label>First Name</label>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <label>Last Name</label>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Email" required>
+                <label>Department</label>
+                <input type="text" id="department" placeholder="Department">
+                <label>Role</label>
+                <input type="text" id="role" placeholder="Role">
+                <div class="button-container">
+                    <button type="button" onclick="addNewEmp()">Cancel</button>
+                    <button type="submit" class="formSubmit-button">Add</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--Fillter Sidebar-->
+    <section>
+        <div id="filterSidebar">
+            <h3>Filter Employees</h3>
+            <form id="filterForm">
+                <label for="filterDepartment">Department</label>
+                <input type="text" id="filterDepartment" name="filterDepartment" placeholder="Department">
+                <br />
+                <label for="filterRole">Role</label>
+                <input type="text" id="filterRole" name="filterRole" placeholder="Role">
+                <br />
+                <button type="button" onclick="applyFilters()">Apply</button>
+                <button type="button" onclick="clearFilters()">Clear</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="fotter-section">
+        <p>@ 2025 Employee Directory App. All rights reserved.</p>
+    </footer>
+
+    <script src="src/main/resources/static/app.js"></script>
+</body>
+
+</html>
