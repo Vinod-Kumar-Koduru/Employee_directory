@@ -157,7 +157,7 @@ function editEmployee(id) {
    * show alert() with deleted id */
 function deleteEmployee(id) {
     filteredEmployees = filteredEmployees.filter(emp => emp.id !== id);
-    displayCard(currentPagintialPage);
+    displayCard(intialPage);
     alert("Employee Deleted " + id);
 }
 
